@@ -1,0 +1,38 @@
+
+html, body {
+            height: 100%;
+            margin: 0;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+        .content {
+            flex: 1;
+        }
+        footer {
+  background-color: #313131;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+#social a ,politique{
+  margin-right: 4px; /* Espace de 16px entre les icônes */
+}
+#social a:last-child {
+  margin-right: 0; /* Pas de marge à droite pour le dernier élément */
+}
+p{
+    font-size: 12px;
+}
+#divider{
+    width: 98%;
+}

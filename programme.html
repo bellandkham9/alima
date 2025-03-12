@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/acceuil.css" />
+    <link rel="stylesheet" href="/assets/css/calendar.css" />
+    <style>
+      h5 {
+        color: white;
+      }
+      .navbar-toggler {
+        background-color: black;
+        color: white;
+      }
+      .navbar-toggler-icon {
+        filter: invert(1); /* Inverse les couleurs, donc noir -> blanc */
+      }
+      #equipe {
+        background: url("assets/image/acceuil/background2.png") no-repeat center
+          center/cover;
+      }
+
+      /* Video Background Section */
+      .video-section {
+        width: 100%;
+        height: 100vh; /* Adjust height as needed */
+        overflow: hidden;
+        display: flex;
+      }
+
+      .video-section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Dark Overlay */
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      /* Content */
+      .video-content1 {
+        width: 30%;
+        top: 35%;
+        left: 5%;
+        position: absolute;
+        color: white;
+        text-align: start;
+        z-index: 1;
+      }
+      .video-content2 {
+        text-align: center;
+        margin: 0 auto;
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 47%;
+
+        z-index: 1;
+      }
+      .navbar {
+        width: 100%;
+        background-color: white;
+        position: fixed;
+        z-index: 100000;
+      }
+
+      .nav-link {
+        color: black !important; /* Garde le texte blanc après scroll */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg mb-4">
+      <div class="container-fluid">
+        <!-- Bouton de bascule pour les écrans mobiles -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenu de la navbar -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <!-- Liste centrée -->
+          <ul class="navbar-nav mx-auto">
+            <!-- Utilisation de mx-auto pour centrer -->
+            <li class="nav-item">
+              <a class="nav-link" href="/acceuil.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/programme.html">Programme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admissions.html">Admissions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Actualités</a>
+            </li>
+            <li class="nav-item">
+              <button id="btn-first" class="btn-menu" type="button">
+                Inscription
+              </button>
+            </li>
+            <li class="nav-item">
+              <button id="btn-second" class="btn-menu" type="button">
+                Suivez-nous
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bouton de recherche (aligné à droite) -->
+        <button id="btn-Recherche" type="button" class="ms-auto">
+          <!-- Utilisation de ms-auto pour aligner à droite -->
+          <img
+            width="32"
+            height="32"
+            src="/assets/image/acceuil/search.png"
+            alt="Recherche"
+          />
+        </button>
+      </div>
+    </nav>
+
+    <header class="wrapper bg-primary text-white">
+      <!-- Video Background Section -->
+      <section class="video-section">
+        <video
+          id="video"
+          controls="controls"
+          poster="assets/image/programme/poster.png"
+        >
+          <source src="/assets/media/match.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture des vidéos.
+        </video>
+        <div class="video-content1">
+          <img
+            class="img-fluid"
+            src="/assets/image/programme/Groupe 387.png"
+            alt=""
+            srcset=""
+          />
+          <h4 class="p-2" style="color: white">
+            Un parcours intégré alliant performance <br />
+            sportive et excellence académique.
+          </h4>
+          <img
+            class="img-fluid"
+            src="/assets/image/programme/Groupe 338.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="video-content2">
+          <button style="border-radius: 100%" id="playButton" class="btn">
+            <img
+              src="/assets/image/programme/play.png"
+              class="img-fluid"
+              alt=""
+              srcset=""
+            />
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <section
+      id="presentation"
+      class="justify-content-center text-center mt-4 pt-5"
+    >
+      <h1 style="font-weight: bold">Présentation Globale des Programmes</h1>
+      <div class="container text-center" style="width: 60%">
+        <p>
+          À l’Académie Alima, nous croyons que l’excellence sur le terrain va de
+          pair avec une solide formation académique. Inspirée par l’expérience
+          de Blaise Matuidi, notre académie offre un équilibre unique entre
+          entraînement intensif et perfectionnement éducatif. Ici, chaque
+          session de football est conçue pour renforcer non seulement les
+          compétences techniques et physiques, mais aussi pour développer le
+          savoir et le sens critique des jeunes
+        </p>
+      </div>
+      <div class="row justify-content-center pt-5 mt-4 g-1">
+        <div class="col-md-3 mb-3">
+          <img
+            style="width: 95%"
+            src="/assets/image/programme/Groupe 346.png"
+            alt=""
+          />
+        </div>
+        <div class="col-md-3 mb-3">
+          <img
+            style="width: 95%"
+            src="/assets/image/programme/Groupe 342.png"
+            alt=""
+          />
+        </div>
+        <div class="col-md-3 mb-3">
+          <img
+            style="width: 95%"
+            src="/assets/image/programme/Groupe 343.png"
+            alt=""
+          />
+        </div>
+        <div class="col-md-3 mb-3">
+          <img
+            style="width: 95%"
+            src="/assets/image/programme/Groupe 341.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      id="Detailles"
+      class="justify-content-center text-center mt-4 pt-5"
+    >
+      <h1 style="font-weight: bold">Sections Détaillées des Programmes</h1>
+      <div
+        class="row justify-content-center p-5 mt-4 g-1"
+        style="align-items: center; background-color: #f6f5db"
+      >
+        <div class="col-md-4 mb-3 justify-content-center text-center">
+          <img src="/assets/image/programme/Tracé 638.png" alt="" />
+          <h2>
+            Programme Sportif <br />
+            de Haut Niveau
+          </h2>
+        </div>
+        <div
+          class="col-md-4 mb-3 text-start"
+          style="
+            border: 1px solid black;
+            padding: 5px;
+            justify-items: center;
+            justify-content: center;
+          "
+        >
+          <p class="" style="position: relative">
+            Une section dédiée aux entraînements footballistiques intensifs,<br />
+            incluant des exercices techniques, tactiques et de condition
+            physique. <br />
+            Le contenu met en avant des coachs expérimentés et les méthodes
+            <br />
+            de préparation utilisées pour développer l’agilité, la rapidité et
+            la <br />
+            stratégie de jeu.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div
+            class="container"
+            style="
+              width: 300px;
+              height: auto;
+              padding: 10px;
+              background-color: black;
+            "
+          >
+            <h5 style="color: white">Visitez nos infrastructures</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row justify-content-center p-5 g-1"
+        style="align-items: center; background-color: #5ebffc"
+      >
+        <div class="col-md-4 mb-3 justify-content-center">
+          <img src="/assets/image/programme/Groupe 349.png" alt="" />
+          <h2 style="color: white">
+            Programme <br />
+            Éducatif Intégré
+          </h2>
+        </div>
+        <div
+          class="col-md-4 mb-3 text-start"
+          style="
+            border: 1px solid white;
+            padding: 5px;
+            justify-items: center;
+            justify-content: center;
+          "
+        >
+          <p class="" style="position: relative; color: white">
+            Les élèves bénéficient d’un programme éducatif riche et
+            diversifié,<br />
+            intégrant des cours de français, d’anglais et des matières <br />
+            fondamentales, dispensés par des professionnels expérimentés. Ce
+            <br />
+            parcours pédagogique est pensé pour développer leur esprit critique
+            <br />
+            et leur créativité, tout en les préparant aux défis académiques.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div
+            class="container text-start"
+            style="width: 300px; height: auto; padding: 10px; color: white"
+          >
+            <p style="color: white">
+              <b>Points Forts :</b> <br /><br />
+              Des points clés tels que « Suivi individualisé »,<br />
+              « Partenariats avec des établissements reconnus » et <br />
+              « Flexibilité pour s’adapter aux besoins de chaque <br />
+              élève ».
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row justify-content-center p-5 g-1"
+        style="align-items: center; background-color: #20366d"
+      >
+        <div class="col-md-4 mb-3 justify-content-center">
+          <img src="/assets/image/programme/Tracé 643.png" alt="" />
+          <h2 style="color: white">
+            Développement <br />
+            Personnel et <br />
+            Leadership
+          </h2>
+        </div>
+        <div
+          class="col-md-4 mb-3 text-start"
+          style="
+            border: 1px solid white;
+            padding: 5px;
+            justify-items: center;
+            justify-content: center;
+          "
+        >
+          <p class="" style="position: relative; color: white">
+            Un volet dédié aux ateliers de développement personnel, au coaching
+            <br />
+            mental et aux activités de renforcement du leadership et de l'esprit
+            <br />
+            d'équipe. <br />
+            Ce programme s'appuie sur les meilleures pratiques de formation en
+            <br />
+            soft skills, combinant séminaires, ateliers interactifs et sessions
+            de <br />
+            mentorat.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div
+            class="container text-start"
+            style="width: 300px; height: auto; padding: 10px; color: white"
+          >
+            <p style="color: white">
+              <b>Points Forts :</b> <br />
+              <br />
+              Des points clés tels que « La confiance en soi », <br />
+              « L'auto-management » et <br />
+              « L'intelligence émotionnelle ». <br />
+              élève ».
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row justify-content-center p-5 g-1"
+        style="align-items: center; background-color: black"
+      >
+        <div class="col-md-4 mb-3 justify-content-center">
+          <img src="/assets/image/programme/Tracé 644.png" alt="" />
+          <h2 style="color: white">
+            Coaching et <br />
+            Mentorat <br />
+            Personnalisé <br />
+          </h2>
+        </div>
+        <div
+          class="col-md-4 mb-3 text-start"
+          style="
+            border: 1px solid white;
+            padding: 5px;
+            justify-items: center;
+            justify-content: center;
+          "
+        >
+          <p class="" style="position: relative; color: white">
+            Des séances de coaching individuel et des programmes de mentorat
+            <br />
+            assurés par des professionnels, dont certains accompagnés par
+            <b
+              >Blaise <br />
+              Matuidi.</b
+            >
+            <br />
+            Cette structuration vise la mise avant l'aspect personnalisé du
+            suivi, <br />
+            crucial pour l'évolution de chaque jeune talent.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div
+            class="container"
+            style="
+              width: 300px;
+              height: auto;
+              padding: 10px;
+              background-color: white;
+              color: black;
+            "
+          >
+            <h6>Demander un rendez-vous</h6>
+          </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-md-2"></div>
+          <div
+            class="col-md-4 d-flex"
+            style="align-items: center; justify-items: center"
+          >
+            <img
+              style="width: 40%"
+              src="/assets/image/acceuil/femme.png"
+              class="img-fluid mb-4"
+              alt="Marie Dupont"
+            />
+            <div style="position: relative; color: white; left: 10px">
+              <h5>Marie Dupont</h5>
+              <p>Directrice Pédagogique</p>
+              <div class="mt-3">
+                <p>
+                  Ancien joueur professionel, il inspire <br />
+                  la nouvelle géneration d'Athlètes
+                </p>
+              </div>
+              <div
+                id=""
+                class="d-flex justify-content-center align-items-center gap-2"
+              >
+                <a href="#">
+                  <img
+                    width="16"
+                    height="16"
+                    src="/assets/image/programme/Icon - LinkedIn_3.png"
+                    alt="Facebook"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    width="16"
+                    height="16"
+                    src="/assets/image/programme/Icon - X_3.png"
+                    alt="YouTube"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    width="16"
+                    height="16"
+                    src="/assets/image/programme/Icon - Dribble_3.png"
+                    alt="LinkedIn"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 d-flex"
+            style="align-items: center; justify-items: center"
+          >
+            <img
+              style="width: 40%"
+              src="/assets/image/acceuil/femme.png"
+              class="img-fluid mb-4"
+              alt="Marie Dupont"
+            />
+            <div style="position: relative; color: white; left: 10px">
+              <h5>Marie Dupont</h5>
+              <p>Directrice Pédagogique</p>
+              <div class="mt-3">
+                <p>
+                  Ancien joueur professionel, il inspire <br />
+                  la nouvelle géneration d'Athlètes
+                </p>
+              </div>
+              <div
+                id=""
+                class="d-flex justify-content-center align-items-center gap-2"
+              >
+                <a href="#">
+                  <img
+                    width="16"
+                    height="16"
+                    src="/assets/image/programme/Icon - LinkedIn_3.png"
+                    alt="Facebook"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    width="16"
+                    height="16"
+                    src="/assets/image/programme/Icon - X_3.png"
+                    alt="YouTube"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    width="16"
+                    height="16"
+                    src="/assets/image/programme/Icon - Dribble_3.png"
+                    alt="LinkedIn"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+        <h1 class="mt-5" style="color: white; font-weight: bold">
+          Nos experts en <br />
+          coaching
+        </h1>
+      </div>
+    </section>
+    <section id="calendar" class="justify-content-center text-center">
+      <h1 class="mt-4" style="font-weight: bold">
+        Calendrier et Modalités d'inscription
+      </h1>
+      <div class="">
+        <section id="calendrier" class="justify-content-center text-center">
+          <div class="row">
+            <div class="col-12">
+              <div class="content mb-0" style="background-color: #5ebffc">
+                <div class="calendar-container">
+                  <div class="calendar">
+                    <div class="year-header">
+                      <span class="left-button fa fa-chevron-left" id="prev">
+                      </span>
+                      <span class="year" id="label"></span>
+                      <span class="right-button fa fa-chevron-right" id="next">
+                      </span>
+                    </div>
+                    <table class="months-table w-100">
+                      <tbody>
+                        <tr class="months-row">
+                          <td class="month">Jan</td>
+                          <td class="month">Feb</td>
+                          <td class="month">Mar</td>
+                          <td class="month">Apr</td>
+                          <td class="month">May</td>
+                          <td class="month">Jun</td>
+                          <td class="month">Jul</td>
+                          <td class="month">Aug</td>
+                          <td class="month">Sep</td>
+                          <td class="month">Oct</td>
+                          <td class="month">Nov</td>
+                          <td class="month">Dec</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table class="days-table w-100">
+                      <td class="day">Sun</td>
+                      <td class="day">Mon</td>
+                      <td class="day">Tue</td>
+                      <td class="day">Wed</td>
+                      <td class="day">Thu</td>
+                      <td class="day">Fri</td>
+                      <td class="day">Sat</td>
+                    </table>
+                    <div class="frame">
+                      <table class="dates-table w-100">
+                        <tbody class="tbody"></tbody>
+                      </table>
+                    </div>
+                    <button class="button" id="add-button">Add Event</button>
+                  </div>
+                </div>
+                <div class="d-none md:" style="background-color: #5ebffc">
+                  <h2 style="color: white">Dates importantes</h2>
+                  <div class="events-container"></div>
+                </div>
+                <div class="dialog" id="dialog">
+                  <h2 class="dialog-header">Add New Event</h2>
+                  <form class="form" id="form">
+                    <div class="form-container align-items-center">
+                      <label
+                        class="form-label"
+                        id="valueFromMyButton"
+                        for="name"
+                        >Event name</label
+                      >
+                      <input
+                        class="input"
+                        type="text"
+                        id="name"
+                        maxlength="36"
+                      />
+                      <label
+                        class="form-label"
+                        id="valueFromMyButton"
+                        for="count"
+                        >Number of people to invite</label
+                      >
+                      <input
+                        class="input"
+                        type="number"
+                        id="count"
+                        min="0"
+                        max="1000000"
+                        maxlength="7"
+                      />
+                      <input
+                        type="button"
+                        value="Cancel"
+                        class="button"
+                        id="cancel-button"
+                      />
+                      <input
+                        type="button"
+                        value="OK"
+                        class="button button-white"
+                        id="ok-button"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mb-4">
+          <div
+            class="row p-5"
+            style="
+              background-color: black;
+              width: 80%;
+              margin: 0 auto;
+              justify-content: center;
+              justify-items: center;
+              align-items: center;
+            "
+          >
+            <div class="col-md-7 text-center md:text-start">
+              <h2 style="color: white">
+                Lisez notre brochure <br />
+                pour en savoir plus
+              </h2>
+            </div>
+            <div class="col-md-5 text-start">
+              <button type="button" style="border: none">
+                <div
+                  class="container"
+                  style="
+                    width: 300px;
+                    height: auto;
+                    padding: 10px;
+                    background-color: white;
+                    color: white;
+                  "
+                >
+                  <h5 style="color: black">Télécharger la borchure</h5>
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div
+          class="row mt-4 p-5"
+          style="
+            background-color: black;
+            width: 80%;
+            margin: 0 auto;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+          "
+        >
+          <div class="container">
+            <h2 class="fw-bold" style="color: white">
+              Inscrivez-vous à notre Newsletter
+            </h2>
+            <p style="color: white">
+              Recevez les dernières nouvelles et mises à jour directement sur
+              votre mobile ou par email.
+            </p>
+            <form class="d-flex justify-content-center mt-3">
+              <input
+                type="email"
+                class="form-control email-input"
+                placeholder="Votre adresse email"
+                required
+              />
+              <button type="submit" class="btn btn-light ms-2">
+                S'inscrire
+              </button>
+            </form>
+            <small class="mt-2 d-block" style="color: white"
+              >En vous inscrivant, vous acceptez nos Conditions
+              Générales.</small
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials mt-5">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="text-center">
+                <h2 class="fw-bold">Témoignages des bénéficiaires</h2>
+                <p>
+                  Découvrez l'impact de notre savoir-faire sur l'avenir de nos
+                  jeunes talents
+                </p>
+              </div>
+              <div class="row">
+                <!-- Témoignage 1 -->
+                <div class="col-6">
+                  <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <p>
+                      "Bénis est devenu bien plus organisé que moi à son jeune
+                      âge. Je ne vous parle même pas de ses notes scolaires, qui
+                      sont bien meilleures aujourd'hui. Je ne remercierai jamais
+                      assez l'Académie Alima."
+                    </p>
+                    <div class="profile">
+                      <img
+                        src="/assets/image/acceuil/photo.png"
+                        alt="Patrick MBA"
+                      />
+                      <div>
+                        <strong>Patrick MBA</strong><br />
+                        <a href="#" class="parent-link"
+                          >Parent, Académie Alima</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="col-6">
+                  <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <p>
+                      "Avant, je m'inquiétais beaucoup pour l'avenir de ma fille
+                      qui rêvait de jouer au football. Mais maintenant, je
+                      m'inquiète seulement du fait qu'elle ne veuille plus
+                      rester trop longtemps à la maison de peur de rater ses
+                      cours. Merci, Académie Alima."
+                    </p>
+                    <div class="profile">
+                      <img
+                        src="/assets/image/acceuil/photo.png"
+                        alt="Simone EDZOA"
+                      />
+                      <div>
+                        <strong>Simone EDZOA</strong><br />
+                        <a href="#" class="parent-link"
+                          >Parent, Académie Alima</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="text-center">
+                <h2 class="fw-bold">Témoignages des bénéficiaires</h2>
+                <p>
+                  Découvrez l'impact de notre savoir-faire sur l'avenir de nos
+                  jeunes talents
+                </p>
+              </div>
+              <div class="row">
+                <!-- Témoignage 1 -->
+                <div class="col-6">
+                  <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <p>
+                      "Bénis est devenu bien plus organisé que moi à son jeune
+                      âge. Je ne vous parle même pas de ses notes scolaires, qui
+                      sont bien meilleures aujourd'hui. Je ne remercierai jamais
+                      assez l'Académie Alima."
+                    </p>
+                    <div class="profile">
+                      <img
+                        src="/assets/image/acceuil/photo.png"
+                        alt="Patrick MBA"
+                      />
+                      <div>
+                        <strong>Patrick MBA</strong><br />
+                        <a href="#" class="parent-link"
+                          >Parent, Académie Alima</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="col-6">
+                  <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <p>
+                      "Avant, je m'inquiétais beaucoup pour l'avenir de ma fille
+                      qui rêvait de jouer au football. Mais maintenant, je
+                      m'inquiète seulement du fait qu'elle ne veuille plus
+                      rester trop longtemps à la maison de peur de rater ses
+                      cours. Merci, Académie Alima."
+                    </p>
+                    <div class="profile">
+                      <img
+                        src="/assets/image/acceuil/photo.png"
+                        alt="Simone EDZOA"
+                      />
+                      <div>
+                        <strong>Simone EDZOA</strong><br />
+                        <a href="#" class="parent-link"
+                          >Parent, Académie Alima</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          style="width: 50px"
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="" aria-hidden="true">
+            <img
+              style="width: 30px"
+              src="/assets/image/acceuil/prev.png"
+              alt=""
+              srcset=""
+            />
+          </span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="" aria-hidden="true">
+            <img
+              style="width: 30px"
+              src="/assets/image/acceuil/next.png"
+              alt=""
+              srcset=""
+            />
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let video = document.getElementById("video");
+        let playButton = document.getElementById("playButton");
+
+        playButton.addEventListener("click", function () {
+          if (video.paused) {
+            video.play();
+            playButton.style.display = "none"; // Cacher le bouton après lecture
+          }
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function loadHTML(containerId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text()) // Convert the response to text
+          .then((html) => {
+            document.getElementById(containerId).innerHTML = html; // Insert into container
+          })
+          .catch((error) => console.error("Error loading HTML:", error));
+      }
+
+      // Example: Load "content.html" into a div with ID "myContainer"
+      loadHTML("footer", "footer.html");
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+  <footer class="" id="footer"></footer>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/acceuil.css" />
+    <link rel="stylesheet" href="/assets/css/calendar.css" />
+    <style>
+      body {
+        background-color: white;
+      }
+      .navbar-toggler {
+        background-color: black;
+        color: white;
+      }
+      .navbar-toggler-icon {
+        filter: invert(1); /* Inverse les couleurs, donc noir -> blanc */
+      }
+      h5 {
+        color: white;
+      }
+      #calendrier {
+        background: url("assets/image/acceuil/background.png") no-repeat center
+          center/cover;
+      }
+      #formulaire {
+        background: url("assets/image/acceuil/background3.png") no-repeat center
+          center/cover;
+      }
+      .navbar {
+        width: 100%;
+        background-color: transparent;
+        position: fixed;
+        z-index: 100000;
+      }
+
+      .navbar.scrolled {
+        background-color: black; /* Couleur après le scroll */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre */
+      }
+      .navbar {
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .navbar.scrolled .nav-link {
+        color: white !important; /* Garde le texte blanc après scroll */
+      }
+
+      /* Video Background Section */
+      .video-section {
+        width: 100%;
+        height: 100vh; /* Adjust height as needed */
+        overflow: hidden;
+        display: flex;
+      }
+
+      .video-section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Dark Overlay */
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      /* Content */
+      .video-content1 {
+        width: 30%;
+        top: 35%;
+        left: 5%;
+        position: absolute;
+        color: white;
+        text-align: start;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg mb-4">
+      <div class="container-fluid">
+        <!-- Bouton de bascule pour les écrans mobiles -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenu de la navbar -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <!-- Liste centrée -->
+          <ul class="navbar-nav mx-auto">
+            <!-- Utilisation de mx-auto pour centrer -->
+            <li class="nav-item">
+              <a class="nav-link" href="/acceuil.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/programme.html">Programme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admissions.html">Admissions</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Actualité</a></li>
+            <li class="nav-item">
+              <button id="btn-first" class="btn-menu" type="button">
+                Inscription
+              </button>
+            </li>
+            <li class="nav-item">
+              <button id="btn-second" class="btn-menu" type="button">
+                Suivez-nous
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bouton de recherche -->
+        <button id="btn-Recherche" type="button" class="ms-auto">
+          <img
+            width="32"
+            height="32"
+            src="/assets/image/acceuil/search.png"
+            alt="Recherche"
+          />
+        </button>
+      </div>
+    </nav>
+
+    <header class="wrapper text-white mb-4">
+      <section id="calendrier" class="justify-content-center text-center mt-5">
+        <h1 class="mt-4" style="font-size: 60px">Prenons rendez-vous</h1>
+        <p style="color: black; font-size: 14px">Nous sommes à votre écoute</p>
+        <img
+          style="width: 80%"
+          class="img-fluid mt-5"
+          src="/assets/image/acceuil/calendar.png"
+          alt=""
+          srcset=""
+        />
+      </section>
+      <section class="mb-4">
+        <div
+          class="row p-5"
+          style="
+            background-color: black;
+            width: 80%;
+            margin: 0 auto;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+          "
+        >
+          <div class="container">
+            <form class="container text-white">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="nom" class="">Nom complet</label>
+                  <input type="text" class="form-control" id="nom" />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="">Email</label>
+                  <input type="email" class="form-control" id="email" />
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="telephone" class=""
+                    >Numéro de téléphone (WhatsApp)</label
+                  >
+                  <input type="tel" class="form-control" id="telephone" />
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                  <button
+                    style="background-color: #5ebffc; color: white"
+                    type="submit"
+                    class="btn w-100 mt-3"
+                  >
+                    Envoyer
+                  </button>
+                </div>
+                <div class="col-md-4 d-flex align-items-end"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </header>
+    <section id="formulaire" class="justify-content-center text-center">
+      <div style="width: 500px; margin: 0 auto">
+        <h1>Formulaire de contact en ligne</h1>
+        <form
+          action="/assets/php/sendMail.php"
+          method="POST"
+          class="container mt-4 text-start"
+          style="justify-content: center; align-items: center"
+        >
+          <div class="mb-3">
+            <label style="color: black" for="nom" class="">Nom complet</label>
+            <input type="text" class="form-control" name="nom" id="nom" />
+          </div>
+
+          <div class="mb-3">
+            <label style="color: black" for="telephone" class=""
+              >Numéro de téléphone (WhatsApp)</label
+            >
+            <input
+              type="tel"
+              class="form-control"
+              name="telephone"
+              id="telephone"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label style="color: black" for="message" class="">Message</label>
+            <textarea
+              class="form-control"
+              name="message"
+              id="message"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="conditions" />
+            <label class="form-check-label" for="conditions">
+              J'accepte les Conditions
+            </label>
+          </div>
+
+          <div
+            class="mb-4"
+            style="
+              margin: 0 auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <button
+              style="background-color: black; color: white"
+              type="submit"
+              class="btn w-50"
+            >
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="container d-flex flex-column align-items-center text-center"
+            >
+              <div class="text-center">
+                <h2 class="fw-bold">Témoignages des bénéficiaires</h2>
+                <p>
+                  Découvrez l'impact de notre savoir-faire sur l'avenir de nos
+                  jeunes talents
+                </p>
+              </div>
+
+              <div
+                class="row justify-content-center align-items-center p-2 rounded"
+                style="width: 80%"
+              >
+                <!-- Témoignage avec vidéo -->
+                <div
+                  class="col-md-12 d-flex flex-column flex-md-row align-items-center text-center text-md-start"
+                >
+                  <div
+                    class="mb-3 mb-md-0"
+                    style="width: 100%; max-width: 400px"
+                  >
+                    <video
+                      class="w-100 rounded"
+                      id="video"
+                      controls
+                      poster="/assets/image/acceuil/Groupe 387.png"
+                    >
+                      <source src="/assets/media/match.mp4" type="video/mp4" />
+                      Votre navigateur ne supporte pas la lecture des vidéos.
+                    </video>
+                  </div>
+
+                  <div class="testimonial ms-md-4 text-start">
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <p>
+                      "L'Académie Alima a complètement transformé la vie de mon
+                      enfant, lui offrant des opportunités qu'il n'aurait jamais
+                      imaginées."
+                    </p>
+                    <div class="profile d-block">
+                      <strong>Naomie OKOUYA</strong><br />
+                      <a href="#" class="parent-link">Parent, Académie Alima</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div
+              class="container d-flex flex-column align-items-center text-center"
+            >
+              <div class="text-center">
+                <h2 class="fw-bold">Témoignages des bénéficiaires</h2>
+                <p>
+                  Découvrez l'impact de notre savoir-faire sur l'avenir de nos
+                  jeunes talents
+                </p>
+              </div>
+
+              <div
+                class="row justify-content-center align-items-center p-4 rounded"
+                style="width: 80%"
+              >
+                <!-- Témoignage avec vidéo -->
+                <div
+                  class="col-md-12 d-flex flex-column flex-md-row align-items-center text-center text-md-start"
+                >
+                  <div
+                    class="mb-3 mb-md-0"
+                    style="width: 100%; max-width: 400px"
+                  >
+                    <video
+                      class="w-100 rounded"
+                      id="video"
+                      controls
+                      poster="/assets/image/acceuil/Groupe 387.png"
+                    >
+                      <source src="/assets/media/match.mp4" type="video/mp4" />
+                      Votre navigateur ne supporte pas la lecture des vidéos.
+                    </video>
+                  </div>
+
+                  <div class="testimonial ms-md-4 text-start">
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <p>
+                      "L'Académie Alima a complètement transformé la vie de mon
+                      enfant, lui offrant des opportunités qu'il n'aurait jamais
+                      imaginées."
+                    </p>
+                    <div class="profile d-block">
+                      <strong>Naomie OKOUYA</strong><br />
+                      <a href="#" class="parent-link">Parent, Académie Alima</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          style="width: 50px"
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="" aria-hidden="true">
+            <img
+              style="width: 30px"
+              src="/assets/image/acceuil/prev.png"
+              alt=""
+              srcset=""
+            />
+          </span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="" aria-hidden="true">
+            <img
+              style="width: 30px"
+              src="/assets/image/acceuil/next.png"
+              alt=""
+              srcset=""
+            />
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let video = document.getElementById("video");
+        let playButton = document.getElementById("playButton");
+
+        playButton.addEventListener("click", function () {
+          if (video.paused) {
+            video.play();
+            playButton.style.display = "none"; // Cacher le bouton après lecture
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navbar = document.querySelector(".navbar");
+        var navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            navbar.classList.add("bg-dark", "shadow");
+            navbar.classList.remove("bg-transparent");
+            navLinks.forEach((link) => (link.style.color = "white")); // Garde les liens en blanc
+          } else {
+            navbar.classList.remove("bg-dark", "shadow");
+            navbar.classList.add("bg-transparent");
+            navLinks.forEach((link) => (link.style.color = "black")); // Garde les liens en blanc même en haut
+          }
+        });
+      });
+    </script>
+    <script>
+      function loadHTML(containerId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text()) // Convert the response to text
+          .then((html) => {
+            document.getElementById(containerId).innerHTML = html; // Insert into container
+          })
+          .catch((error) => console.error("Error loading HTML:", error));
+      }
+
+      // Example: Load "content.html" into a div with ID "myContainer"
+      loadHTML("footer", "footer.html");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+  <footer class="" id="footer"></footer>
+</html>

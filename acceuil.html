@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/acceuil.css" />
+    <style>
+      header {
+        background: url("assets/image/acceuil/background.png") no-repeat center
+          center/cover;
+      }
+      .navbar-toggler {
+        background-color: black;
+        color: white;
+      }
+      .navbar-toggler-icon {
+        filter: invert(1); /* Inverse les couleurs, donc noir -> blanc */
+      }
+      #equipe {
+        background: url("assets/image/acceuil/background2.png") no-repeat center
+          center/cover;
+      }
+      .navbar {
+        width: 100%;
+        background-color: transparent;
+        position: fixed;
+        z-index: 100000;
+      }
+      .navbar.scrolled {
+        background-color: black; /* Couleur après le scroll */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg mb-4t">
+      <div class="container-fluid">
+        <!-- Bouton de bascule pour les écrans mobiles -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenu de la navbar -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <!-- Liste centrée -->
+          <ul class="navbar-nav mx-auto">
+            <!-- Utilisation de mx-auto pour centrer -->
+            <li class="nav-item">
+              <a class="nav-link" href="/acceuil.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/programme.html">Programme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admissions.html">Admissions</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Actualité</a></li>
+            <li class="nav-item">
+              <button id="btn-first" class="btn-menu" type="button">
+                Inscription
+              </button>
+            </li>
+            <li class="nav-item">
+              <button id="btn-second" class="btn-menu" type="button">
+                Suivez-nous
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bouton de recherche (aligné à droite) -->
+        <button id="btn-Recherche" type="button" class="ms-auto">
+          <!-- Utilisation de ms-auto pour aligner à droite -->
+          <img
+            width="32"
+            height="32"
+            src="/assets/image/acceuil/search.png"
+            alt="Recherche"
+          />
+        </button>
+      </div>
+    </nav>
+
+    <header class="wrapper text-center bg-primary text-white">
+      <div class="row mt-5">
+        <!-- Colonne de gauche (contenu textuel) -->
+        <div class="col-md-6 text-start ps-5 mt-4">
+          <!-- Utilisation de ps-5 pour le padding à gauche -->
+          <!-- Logo -->
+          <img
+            class="mb-4"
+            style="width: 25%"
+            src="/assets/image/acceuil/logo.png"
+            alt="Logo Alima Académie"
+          />
+
+          <!-- Titres -->
+          <h1 style="color: #20366d">Bienvenue</h1>
+          <h1 style="color: black">Bienvenue, votre avenir</h1>
+          <h1 style="color: black">commence ici</h1>
+
+          <!-- Paragraphe -->
+          <p style="color: black">
+            L'Académie Alima, a vu le jour grâce à la vision de Blaise Matuidi,
+            alliant sport <br />
+            et éducation, soutenu par la vision du Président de la République
+            Congolaise, <br />
+            Chef du Gouvernement, Son Excellence Denis Sassou-Nguesso, de
+            promotion <br />
+            de la jeunesse et de ses oeuvres pour un Congo plus dynamique et
+            émergent.
+          </p>
+          <p style="color: black">
+            Découvrez notre parcours, des défis initiaux aux succès marquants
+            qui ont <br />
+            façonné notre identité.
+          </p>
+        </div>
+
+        <!-- Colonne de droite (image) -->
+        <div class="col-md-6">
+          <img
+            style="width: 80%"
+            class="img-fluid mt-5"
+            src="/assets/image/acceuil/enfant.png"
+            alt="Image d'accueil"
+          />
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="row">
+        <div class="col-md-12 p-5">
+          <img
+            class="img-fluid"
+            src="/assets/image/acceuil/devise.png"
+            alt="Image d'accueil"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="equipe" class="text-center p-5">
+      <h1 style="font-size: 50px; font-weight: bold">
+        Notre <br />
+        Équipe
+      </h1>
+      <p style="font-size: 18px">
+        Découvrez les membres passionnés de notre académie.
+      </p>
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/blaise.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+            <h5>Blaise Matuidi</h5>
+            <p>Fondateur</p>
+            <div class="mt-3">
+              <p>
+                Ancien joueur professionel, il inspire <br />
+                la nouvelle géneration d'Athlètes
+              </p>
+            </div>
+            <div
+              id=""
+              class="d-flex justify-content-center align-items-center gap-2"
+            >
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - LinkedIn_3.png"
+                  alt="Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - X_3.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - Dribble_3.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/femme.png"
+              class="img-fluid mb-4"
+              alt="Marie Dupont"
+            />
+            <h5>Marie Dupont</h5>
+            <p>Directrice Pédagogique</p>
+            <div class="mt-3">
+              <p>
+                Ancien joueur professionel, il inspire <br />
+                la nouvelle géneration d'Athlètes
+              </p>
+            </div>
+            <div
+              id=""
+              class="d-flex justify-content-center align-items-center gap-2"
+            >
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - LinkedIn_3.png"
+                  alt="Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - X_3.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - Dribble_3.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Jean Martin"
+            />
+            <h5>Jean Martin</h5>
+            <p>Enseignant en Mathématiques</p>
+            <div class="mt-3">
+              <p>
+                Ancien joueur professionel, il inspire <br />
+                la nouvelle géneration d'Athlètes
+              </p>
+            </div>
+            <div
+              id=""
+              class="d-flex justify-content-center align-items-center gap-2"
+            >
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - LinkedIn_3.png"
+                  alt="Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - X_3.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - Dribble_3.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/homme.png"
+              class="img-fluid mb-4"
+              alt="Sophie Leroy"
+            />
+            <h5>Sophie Leroy</h5>
+            <p>Coach en Fitness</p>
+            <div class="mt-3">
+              <p>
+                Ancien joueur professionel, il inspire <br />
+                la nouvelle géneration d'Athlètes
+              </p>
+            </div>
+            <div
+              id=""
+              class="d-flex justify-content-center align-items-center gap-2"
+            >
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - LinkedIn_3.png"
+                  alt="Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - X_3.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - Dribble_3.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/blaise.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+            <h5>Blaise Matuidi</h5>
+            <p>Fondateur</p>
+            <div class="mt-3">
+              <p>
+                Ancien joueur professionel, il inspire <br />
+                la nouvelle géneration d'Athlètes
+              </p>
+            </div>
+            <div
+              id=""
+              class="d-flex justify-content-center align-items-center gap-2"
+            >
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - LinkedIn_3.png"
+                  alt="Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - X_3.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - Dribble_3.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/femme.png"
+              class="img-fluid mb-4"
+              alt="Marie Dupont"
+            />
+            <h5>Marie Dupont</h5>
+            <p>Directrice Pédagogique</p>
+            <div class="mt-3">
+              <p>
+                Ancien joueur professionel, il inspire <br />
+                la nouvelle géneration d'Athlètes
+              </p>
+            </div>
+            <div
+              id=""
+              class="d-flex justify-content-center align-items-center gap-2"
+            >
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - LinkedIn_3.png"
+                  alt="Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - X_3.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - Dribble_3.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Jean Martin"
+            />
+            <h5>Jean Martin</h5>
+            <p>Enseignant en Mathématiques</p>
+            <div class="mt-3">
+              <p>
+                Ancien joueur professionel, il inspire <br />
+                la nouvelle géneration d'Athlètes
+              </p>
+            </div>
+            <div
+              id=""
+              class="d-flex justify-content-center align-items-center gap-2"
+            >
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - LinkedIn_3.png"
+                  alt="Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - X_3.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - Dribble_3.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/homme.png"
+              class="img-fluid mb-4"
+              alt="Sophie Leroy"
+            />
+            <h5>Sophie Leroy</h5>
+            <p>Coach en Fitness</p>
+            <div class="mt-3">
+              <p>
+                Ancien joueur professionel, il inspire <br />
+                la nouvelle géneration d'Athlètes
+              </p>
+            </div>
+            <div
+              id=""
+              class="d-flex justify-content-center align-items-center gap-2"
+            >
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - LinkedIn_3.png"
+                  alt="Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - X_3.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  width="16"
+                  height="16"
+                  src="/assets/image/acceuil/Icon - Dribble_3.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <h2 style="color: #5ebffc">Nous recrutons!</h2>
+            <p>Rejounez notre équipe dynamique et passionnée.</p>
+
+            <div
+              style="
+                display: inline-block;
+                text-align: center;
+                justify-items: center;
+                border: 2px solid black;
+              "
+              class="p-2"
+            >
+              <p>Postes fermés pour le moment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center p-5">
+      <h1 style="font-size: 50px; font-weight: bold">Infrastructures</h1>
+      <p style="font-size: 18px">
+        Découvrez nos installations modernes et accueillantes
+      </p>
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/assets/image/acceuil/photo.png"
+              class="img-fluid mb-4"
+              alt="Blaise Matuidi"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-md-1 mt-4 p-4">
+          <img
+            class="img-fluid mt-4"
+            src="/assets/image/acceuil/check.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="col-md-10">
+          <div
+            class="row justify-content-center align-items-center text-center text-md-center"
+            style="background-color: #f6f5db; padding: 10px"
+          >
+            <!-- Left Content (Text & Buttons) -->
+            <div
+              class="col-md-6 d-flex flex-column align-items-center align-items-md-center"
+            >
+              <h1>
+                Rejoignez l'Académie <br />
+                Alima aujourd'hui
+              </h1>
+              <p>
+                Découvrez nos programmes et engagez-vous dans une aventure
+                <br />
+                sportive et éducative unique.
+              </p>
+              <div class="buttons d-flex flex-column flex-sm-row gap-2">
+                <button
+                  type="button"
+                  class="p-2 btn btn-dark"
+                  style="width: 150px"
+                >
+                  <h5 style="color: white">Découvrez</h5>
+                </button>
+                <button
+                  type="button"
+                  class="p-2 btn"
+                  style="background-color: #5ebffc; border: none; width: 150px"
+                >
+                  <h5 style="color: white">Rejoindre</h5>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Content (Image) -->
+            <div class="col-md-6 d-flex justify-content-center mt-5">
+              <img
+                class="img-fluid"
+                src="/assets/image/acceuil/chaussure.png"
+                alt="Description de l'image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-1"></div>
+      </div>
+    </section>
+    <footer class="mt-5" id="footer"></footer>
+    <script>
+      function loadHTML(containerId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text()) // Convert the response to text
+          .then((html) => {
+            document.getElementById(containerId).innerHTML = html; // Insert into container
+          })
+          .catch((error) => console.error("Error loading HTML:", error));
+      }
+
+      // Example: Load "content.html" into a div with ID "myContainer"
+      loadHTML("footer", "footer.html");
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navbar = document.querySelector(".navbar");
+        var navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            navbar.classList.add("bg-dark", "shadow");
+            navbar.classList.remove("bg-transparent");
+            navLinks.forEach((link) => (link.style.color = "white")); // Garde les liens en blanc
+          } else {
+            navbar.classList.remove("bg-dark", "shadow");
+            navbar.classList.add("bg-transparent");
+            navLinks.forEach((link) => (link.style.color = "black")); // Garde les liens en blanc même en haut
+          }
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
